@@ -1,4 +1,4 @@
-import pyperclip, sys, time, os
+import sys, time, os
 from termcolor import colored
 import consts, functions
 
