@@ -30,19 +30,19 @@ def option_selection():
     match choice.lower():
 
         case "a":
-            functions.case_alpha()
+            functions.case_alpha(); time.sleep(0.5)
             
         case "b":
-            functions.case_beta()
+            functions.case_beta(); time.sleep(0.5)
 
         case "c":
-            functions.case_kappa()
+            functions.case_kappa(); time.sleep(0.5)
 
         case "d":
-            functions.case_delta()
+            functions.case_delta(); time.sleep(0.5)
 
         case "e":
-            functions.case_epsilon()
+            functions.case_epsilon(); time.sleep(0.5)
 
         case _:
             print(functions.not_accepted(choice)+"\n")
@@ -61,7 +61,7 @@ while True:
     try:
         option_selection()
     except UserWarning: pass
-    else:
+    except:
         print("\n\n----------------------------\n")
         print(colored(consts.rand_error, "red"))
         input(); clear_screen()

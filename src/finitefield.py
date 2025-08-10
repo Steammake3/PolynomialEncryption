@@ -36,8 +36,7 @@ def GF(p):
             return (IntegerModP(q), IntegerModP(r))
 
         def inverse(self):
-            x,y,d = eGCD(self.n, self.p)
-            return IntegerModP(x)
+            return IntegerModP(pow(self.n, self.p-2, self.p))
 
         def __add__(self, other):
             return IntegerModP(self.n + other) if isinstance(other, int) else IntegerModP(self.n + other.n)

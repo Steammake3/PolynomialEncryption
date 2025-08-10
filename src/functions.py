@@ -62,7 +62,9 @@ def case_delta():
 
     #Ask if should be unformatted
     if input("\n\nWOuld you like an unformatted version of the text? (Y/N) - ").lower()[0] == "y":
-        cprint(handler.get_str_of_points(retvals)[::2], "blue")
+        for i in range(20):
+            print("-", flush=True, end=""); time.sleep(0.01)
+        print(""); cprint(handler.get_str_of_points(retvals)[::2], "blue")
 
 def case_epsilon():
     cprint("WARNING - text and key must be formatted correctly; Otherwise, behavior will be entirely unexpected\n", color="red")

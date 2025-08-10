@@ -28,8 +28,7 @@ class MSG_Handler:
 
     def get_digraph_of_val(self, val):
         BASE97 = MSG_Handler.BASE97
-        field = self.field
-        return f"{BASE97[val%field.p]}{BASE97[int(val)//field.p]}"
+        return f"{BASE97[val%97]}{BASE97[int(val)//97]}"
 
     def possibilities(self, char : int):
         """Couldn't find a good name, it basically finds how many distinct
